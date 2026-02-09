@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 255, 255, 255;
+    --background-end-rgb: 250, 250, 250;
+    --primary-color: #2E8B57;
+    --secondary-color: #D4AF37;
+  }
+
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+    font-family: 'Noto Sans Devanagari', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[var(--primary-color)] hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-[var(--secondary-color)] hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+  }
+  
+  .admin-card {
+    @apply bg-white rounded-xl shadow-lg p-6 border border-gray-200;
+  }
+  
+  .marathi-text {
+    font-family: 'Marathi Calligraphy', 'Noto Sans Devanagari', serif;
+  }
+}
